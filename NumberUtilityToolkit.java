@@ -72,7 +72,6 @@ public class NumberUtilityToolkit {
 
         if (!sc.hasNextInt()) {
             System.out.println("Invalid input. Please enter an integer.");
-            sc.close();
             return;
         }
 
@@ -88,6 +87,5 @@ public class NumberUtilityToolkit {
 
         System.out.println("Reversed: " + reverseNumber(num));
 
-        sc.close();
     }
 }
