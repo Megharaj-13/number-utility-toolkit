@@ -68,24 +68,27 @@ public class NumberUtilityToolkit {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter a number:");
+    while (true) {
+    System.out.println("Enter a number:");
 
-        if (!sc.hasNextInt()) {
-            System.out.println("Invalid input. Please enter an integer.");
-            return;
-        }
+    if (!sc.hasNextInt()) {
+        System.out.println("Invalid input. Please enter an integer.");
+        sc.next();
+        continue;
+    }
 
-        int num = sc.nextInt();
+    int num = sc.nextInt();
 
-        System.out.println("Prime: " + isPrime(num));
-        System.out.println("Palindrome: " + isPalindrome(num));
+    System.out.println("Prime: " + isPrime(num));
+    System.out.println("Palindrome: " + isPalindrome(num));
 
-        long fact = factorial(num);
-        if (fact != -1) {
-            System.out.println("Factorial: " + fact);
-        }
+    long fact = factorial(num);
+    if (fact != -1) {
+        System.out.println("Factorial: " + fact);
+    }
 
-        System.out.println("Reversed: " + reverseNumber(num));
+    System.out.println("Reversed: " + reverseNumber(num));
+}
 
     }
 }
